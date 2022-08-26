@@ -14,13 +14,12 @@ function Search({search, setSearch}) {
             />
             <div className="flex items-center divide-dotted divide-x-2 divide-[#333]">
                 <div className="flex space-x-2 pr-5">
-                    <button className="tag">Minimal</button>
-                    <button className="tag">House</button>
+                    <button className="tag">팝</button>                    
                     <button className="tag">Kpop</button>
                 </div>
                 <div className="flex items-center space-x-1.5 text-[#cecece] pl-4">
                     <MdOutlineShortText className="text-2xl animate-pulse"/>
-                    <span className='font-medium text-sm'>Filter</span>
+                    <span className='font-medium text-sm'>Filters</span>
                 </div>
             </div>
         </div>
