@@ -1,3 +1,11 @@
+import {
+  ChartBarIcon,
+  ClockIcon,
+  DotsHorizontalIcon,
+  HomeIcon,
+} from '@heroicons/react/solid';
+import { FaMicrophoneAlt } from "react-icons/fa";
+import { RiCompassFill } from "react-icons/ri";
 import Image from "next/image";
 
 function Sidebar() {
@@ -12,8 +20,13 @@ function Sidebar() {
         height={56}
         objectFit="contain"
       />
-      <div className="text-white">
-        hello world
+      <div className="flex flex-col space-y-8">
+        <HomeIcon className="sidebarIcon text-white opacity-[0.85]" />
+        <RiCompassFill className="sidebarIcon text-2xl" />
+        <FaMicrophoneAlt className="sidebarIcon ml-1" />
+        <ChartBarIcon className="sidebarIcon" />
+        <ClockIcon className="sidebarIcon" />
+        <DotsHorizontalIcon className="sidebarIcon" />
       </div>
     </section>
   );
