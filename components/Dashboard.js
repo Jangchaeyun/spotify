@@ -16,7 +16,7 @@ function Dashboard() {
   const { data: session } = useSession();
   const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
   const accessToken = session?.accessToken;
-  const [showplayer, setShowPlayer] = useState(false);
+  const [showPlayer, setShowPlayer] = useState(false);
 
   useEffect(() => {
     setShowPlayer(true);

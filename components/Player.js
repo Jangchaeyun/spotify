@@ -2,6 +2,17 @@ import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { playingTrackState, playState } from "../atoms/playerAtom";
 import SpotifyPlayer from 'react-spotify-web-playback';
+import {
+    BsFillPlayFill,
+    BsFillSkipEndFill,
+    BsFillSkipStartFill,
+  } from "react-icons/bs";
+  import { FiVolume2 } from "react-icons/fi";
+  import { RiPlayList2Fill, RiComputerLine } from "react-icons/ri";
+  import { MdOutlineSpeaker } from "react-icons/md";
+  import { BiShuffle } from "react-icons/bi";
+  import { IoRepeatOutline } from "react-icons/io5";
+  import { CgArrowsExpandRight } from "react-icons/cg";
 
 function Player({ accessToken ,trackUri }) {
     const [play, setPlay] = useRecoilState(playState);
@@ -22,7 +33,7 @@ function Player({ accessToken ,trackUri }) {
             bgColor: "#181818",
             color: "#fff",
             loaderColor: "#fff",
-            sliderColor: "#1cb954",
+            liderColor: "#1cb954",
             trackArtistColor: "#ccc",
             trackNameColor: "#fff",
             height: "70px",
