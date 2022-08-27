@@ -99,7 +99,17 @@ function Body({ spotifyApi, chooseTrack }) {
                         <div className="genre">컨트리</div>
                         <div className="genre">테크노</div>
                     </div>
-                    
+                    <button className="btn">모든 장르</button>
+                </div>
+
+                {/* Tracks */}
+                <div>
+                    <h2 className="text-white font-bold mb-3">
+                        {searchResults.length === 0 ? "신곡" : "검색결과"}
+                    </h2>
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </section>
