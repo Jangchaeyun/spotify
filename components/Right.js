@@ -13,6 +13,8 @@ function Right() {
           <MdOutlineSettings className="text-[#ccc] text-xl" />
           <BiBell className="text-[#ccc] text-xl" />
         </div>
+        {/* Profile */}
+        
       </div>
     </section>
   )
