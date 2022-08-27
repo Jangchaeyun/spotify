@@ -68,7 +68,7 @@ function Body({ spotifyApi }) {
                 {searchResults.length === 0 
                     ? newReleases
                         .slice(0,4)
-                        .map((tack) => {
+                        .map((track) => {
                             <Poster 
                                 key={track.id}
                                 track={track} 
@@ -77,7 +77,7 @@ function Body({ spotifyApi }) {
                         })
                     : searchResults
                         .slice(0,4)
-                        .map((tack) => (
+                        .map((track) => (
                             <Poster 
                                 key={track.id}
                                 track={track} 
