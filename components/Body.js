@@ -1,9 +1,16 @@
-import {useState} from "react";
+import { useSession } from "next-auth/react";
+import {useEffect, useState} from "react";
 import Search from "./Search"
 
 function Body() {
+    const { data: session } = useSession();
+    const { accessToken }  = session;
     const [search, setSearch] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
+    const [newReleases, setNewRelease] = useState([]);
+
+    useEffect(() => {
+        if (!accessToken) return;
+    },[]);
 
     return (
         <section
@@ -15,4 +22,4 @@ function Body() {
     );
 }
 
-export default Body
+export default Body;
