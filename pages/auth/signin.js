@@ -38,7 +38,7 @@ function Signin({ providers }) {
             transition duration-300 ease-out border border-transparent uppercase 
             font-bold text-xs md:text-base tracking-wider hover:scale-105 hover:bg-[#0db146]"
             onClick={() => signIn(provider.id)}>
-              {provider.id} 으로 로그인
+              {provider.name} 으로 로그인
           </button>
         </div>
       ))}
