@@ -1,4 +1,4 @@
-import { getProviders, useSession } from "next-auth/react";
+import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Head from 'next/head';
 import Image from "next/image";
