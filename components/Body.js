@@ -1,5 +1,5 @@
 import { useSession } from "next-auth/react";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Search from "./Search"
 
 function Body({ spotifyApi }) {
@@ -10,8 +10,13 @@ function Body({ spotifyApi }) {
 
     useEffect(() => {
         if (!accessToken) return;
-        spotifyApi.setAccessToken(accessToken)
-    },[]);
+        spotifyApi.setAccessToken(accessToken);
+    },[accessToken]);
+
+    // Searching... 
+    useEffect(() => {
+        if 
+    },[accessToken]);
 
     return (
         <section
