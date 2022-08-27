@@ -83,6 +83,25 @@ function Body({ spotifyApi, chooseTrack }) {
                             />
                         ))}
             </div>
+
+            <div className="flex gap-x-8 absolute min-w-full md:relative ml-6">
+                {/* 장르 */}
+                <div className="hidden xl:inline max-w-[270px]">
+                    <h2 className="text-white font-bold mb-3">장르</h2>
+                    <div className="flex gap-x-2 gap-y-2.5 flex-wrap mb-3">
+                        <div className="genre">클래식</div>
+                        <div className="genre">하우스</div>
+                        <div className="genre">미니멀</div>
+                        <div className="genre">힙합</div>
+                        <div className="genre">일렉</div>
+                        <div className="genre">K-pop</div>
+                        <div className="genre">발라드</div>
+                        <div className="genre">컨트리</div>
+                        <div className="genre">테크노</div>
+                    </div>
+                    
+                </div>
+            </div>
         </section>
     );
 }
