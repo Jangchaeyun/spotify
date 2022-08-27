@@ -58,6 +58,7 @@ function Right({ spotifyApi, chooseTrack }) {
             />
           ))}
         </div>
+        <button className="btn">모두 보기</button>
       </div>
     </section>
   );
