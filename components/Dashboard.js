@@ -6,13 +6,13 @@ import Right from './Right'
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
-})
+});
 
 function Dashboard() {
   return (
     <main>
         <Sidebar/>
-        <Body SpotifyApi={spotifyApi} />
+        <Body spotifyApi={spotifyApi} />
         <Right/>
     </main>
   )

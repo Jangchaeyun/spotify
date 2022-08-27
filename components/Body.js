@@ -6,6 +6,7 @@ function Body({ spotifyApi }) {
     const { data: session } = useSession();
     const { accessToken }  = session;
     const [search, setSearch] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
     const [newReleases, setNewRelease] = useState([]);
 
     useEffect(() => {
@@ -15,8 +16,19 @@ function Body({ spotifyApi }) {
 
     // Searching... 
     useEffect(() => {
-        if 
-    },[accessToken]);
+        if (!search) return setSearchResults([]);
+        if (!accessToken) return;
+
+        spotifyApi.searchTracks(search).then((res) => {
+            setSearchResults(res.body.tracks.items.map((track) => {
+                return {
+                    id: track.id
+                }
+            }));
+        })
+    },[search, accessToken]);
+
+    console.log(searchResults);
 
     return (
         <section
