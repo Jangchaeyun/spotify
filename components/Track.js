@@ -25,7 +25,7 @@ function Track({ track, chooseTrack }) {
         <img
             src={track.albumUrl}
             alt=""
-            className="roundend-xl h-12 w-12 object-cover mr-3"
+            className="rounded-xl h-12 w-12 object-cover mr-3"
         />
         <div>
             <h4 className="text-white text-sm font-semibold truncate w-[450px]">
