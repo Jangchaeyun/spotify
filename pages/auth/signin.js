@@ -1,11 +1,24 @@
 import { getProviders, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import Head from 'next/head';
 import Image from "next/image";
+import { useEffect } from "react";
+import Loader from "../../components/Loader";
 
 function Signin({ providers }) {
-  const {data: session} = useSession();
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session]);
+
+  if (session) return <Loader/>
+
   return (
-    <div>
+    <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
         <title>Login - Spotify</title>
         <link rel="icon" href="/favicon.ico" />
