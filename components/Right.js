@@ -7,9 +7,9 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import RecentlyPlayed from './RecentlyPlayed';
 
-function Right({ spotifyApi, chooseTrack }) {
+function Right({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
-  const accessToken = session?.accessToken;
+  const { accessToken } = session;
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
   // Recently Played Tracks...
@@ -50,7 +50,7 @@ function Right({ spotifyApi, chooseTrack }) {
           <ViewGridIcon className="text-[#686868] h-6"/>
         </div>
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide">
-          {recentlyPlayed.map((track,index) => (
+          {recentlyPlayed.map((track, index) => (
             <RecentlyPlayed
               key={index}
               track={track}
